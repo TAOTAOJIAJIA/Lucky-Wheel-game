@@ -13,15 +13,15 @@ let wapper = document.querySelector(".wapper");
         return prevValue + curVal;
     });
 
-
+    //给每一个div赋予文字
     for(let i = 0 ; i < textAll.length ; i++){
             textAll[i].innerHTML = prize[i];  
     }
 
     let isFlag = true;
 
-        document.querySelector(".circle").onclick=function(){
-            console.log(123);
+    function getLucky(){
+        console.log(123);
         if(isFlag){
             
         // 生成权重随机数 生成数的范围是【1,30】
@@ -39,50 +39,57 @@ let wapper = document.querySelector(".wapper");
 
             // 获奖的内容
             let text = prize[randomIndex];
-            
+            console.log("text:"+text);
             switch(randomIndex){
                 case 0:
-                    run(22.5,text);
+                    run(22.5);
                     break;
                 case 1:
-                    run(66.5,text);
+                    run(66.5);
                     break;
                 case 2:
-                    run(112.5,text); 
+                    run(112.5); 
                     break;
                 case 3:
-                    run(157.5,text);
+                    run(157.5);
                     break;
                 case 4:
-                    run(338.5,text);
+                    run(338.5);
                     break;
                 case 5:
-                    run(294.5,text);
+                    run(294.5);
                     break;   
                 case 6:
-                    run(247.5,text);
+                    run(247.5);
                     break;
                 case 7:
-                    run(201.5,text);
+                    run(201.5);
                     break;    
             }
         }
-        
+    }
+
+    document.querySelector(".circle").onclick=function(){
+        getLucky();
     };
 
-    function run(angle,text){
-    isFlag = false;
-    let begin = 0; 
-    let timer = null;
-    let basic = 1800;
-    timer = setInterval(function(){
-        if(begin > (basic+angle)){
-            isFlag = true;
-            clearInterval(timer);
-        }
-        wapper.style.transform="rotate("+(begin)+"deg)";
-        // 这是一个算法 可以出现转盘又很快到慢慢变慢的效果
-        begin+=Math.ceil(basic+angle-begin)*0.1;
-    },70);
-}
+    document.querySelector(".start").onclick=function(){
+        getLucky();
+    };
+
+    function run(angle){
+        isFlag = false;
+        let begin = 0; 
+        let timer = null;
+        let basic = 1800;
+        timer = setInterval(function(){
+            if(begin > (basic+angle)){
+                isFlag = true;
+                clearInterval(timer);
+            }
+            wapper.style.transform="rotate("+(begin)+"deg)";
+            // 这是一个算法 可以出现转盘又很快到慢慢变慢的效果
+            begin+=Math.ceil(basic+angle-begin)*0.1;
+        },70);
+    }
 

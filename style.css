@@ -156,3 +156,22 @@ body{
     left:calc(50% - 10px);
     z-index: -1;
 }
+
+.btn-group{
+   margin-top:30px;
+}
+.btn-group button{
+   width: 100px;
+   height: 30px;
+   background-color: #f2552e;
+   border:none;
+   border-radius: 5px;
+   color:#fff;
+   font-size: 14px;
+   cursor: pointer;
+   /* margin-right: 10px; */
+}
+.btn1{
+   margin-right:60px;
+   margin-left:20px;
+}
