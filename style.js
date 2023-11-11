@@ -18,11 +18,9 @@ let wapper = document.querySelector(".wapper");
             textAll[i].innerHTML = prize[i];  
     }
 
-    let isFlag = true;
+    var isFlag = true;
 
     function getLucky(){
-        console.log(123);
-        if(isFlag){
             
         // 生成权重随机数 生成数的范围是【1,30】
         // 这里需要注意的是，这个30要和最上面的prizeWeight的最后一个值对应
@@ -66,19 +64,24 @@ let wapper = document.querySelector(".wapper");
                     run(201.5);
                     break;    
             }
-        }
+        
     }
 
     document.querySelector(".circle").onclick=function(){
-        getLucky();
+        if(isFlag){
+            isFlag=false;
+            getLucky();
+        }
     };
 
     document.querySelector(".start").onclick=function(){
-        getLucky();
+        if(isFlag){
+            isFlag=false;
+            getLucky();
+        }
     };
 
     function run(angle){
-        isFlag = false;
         let begin = 0; 
         let timer = null;
         let basic = 1800;
