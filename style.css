@@ -26,6 +26,7 @@ body{
     overflow: hidden;
     background-color: black;
     transform:rotate(22.5deg);
+    /* background-color: dimgray; */
  }
 
  .left{
@@ -137,7 +138,7 @@ body{
    line-height: 100px;
    font-size: 30px;
    font-weight: bold;
-   cursor: pointer;
+   cursor: default;
    user-select: none;
 }
 
@@ -156,3 +157,37 @@ body{
     left:calc(50% - 10px);
     z-index: -1;
 }
+
+.btn-group{
+   margin-top:30px;
+}
+.btn-group button{
+   width: 100px;
+   height: 30px;
+   background-color: dimgray;
+   border:none;
+   border-radius: 5px;
+   color:#fff;
+   font-size: 14px;
+   cursor: default;
+   /* margin-right: 10px; */
+}
+.btn1{
+   margin-right:60px;
+   margin-left:20px;
+}
+
+.start-game{
+   width: 265px;
+   height: 50px;
+   background-color: #f2552e;
+   border:none;
+   border-radius: 5px;
+   color:#fff;
+   font-size: 14px;
+   cursor: pointer;
+   margin-left:20px;
+   margin-top:30px;
+   cursor: pointer;
+}
+

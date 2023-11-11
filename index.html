@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- 使得网页在移动设备上正确的缩放 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>转盘游戏</title>
     <link href="./style.css" type="text/css" rel="stylesheet">
 </head>
 <style>
@@ -16,8 +16,9 @@
     
 <!-- 首先通过分析观察可以知道这是一个双层次结构，
 所以需要的是div嵌套结构 -->
+<div>
 <div class="outher">
-    <div class="wapper">
+    <div class="wapper" id="wapper">
         <div class="left">
             <!-- 一边4个选项 -->
                 <div class="one"> <span class="text"></span></div>
@@ -32,13 +33,24 @@
             <div class="four"> <span class="text"></span></div>
         </div>
      
-      </div>
-      <!-- 图形中间的文字 -->
-      <div class="circle">
-             抽奖
-     </div>
-</div>
+    </div>
+    
+    <!-- 图形中间的文字 -->
+    <div class="circle" id="circle">
+        抽奖
+    </div>
 
+</div>
+<button class="start-game" id="start-game">开始游戏</button>
+<div class="btn-group">
+    <button class="btn1 start" id="start-run">转动</button>
+    <button id="pause-run">停止</button>
+</div>
+<div class="btn-group">
+    <button class="btn1" id="speed-up">加速</button>
+    <button id="reverse-run">反向</button>
+</div>
+</div>
 <script src="style.js"></script>
 
 </body>
