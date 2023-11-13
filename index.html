@@ -17,10 +17,11 @@
 <!-- 首先通过分析观察可以知道这是一个双层次结构，
 所以需要的是div嵌套结构 -->
 <div>
+
 <div class="outher">
     <div class="wapper" id="wapper">
         <div class="left">
-            <!-- 一边4个选项 -->
+            
                 <div class="one"> <span class="text"></span></div>
                 <div class="two"> <span class="text"></span></div>
                 <div class="three"> <span class="text"></span></div>
@@ -33,7 +34,7 @@
             <div class="four"> <span class="text"></span></div>
         </div>
      
-    </div>
+    </div> 
     
     <!-- 图形中间的文字 -->
     <div class="circle" id="circle">
@@ -41,7 +42,23 @@
     </div>
 
 </div>
+
+
 <button class="start-game" id="start-game">开始游戏</button>
+<div id="customModal" class="modal">
+    <p  class="lucky">幸运大转盘</p>
+    <p  class="start1">开始转</p>
+    <p  class="users">请输入您的姓名:</p>
+    <form action="">
+        <input  type="text" id="userInput">
+    </form>
+    <button class="startButton" onclick="handleInput()">OK</button>
+    <br>
+    <button class="startButton" onclick="hideModal()">Cancel</button>
+</div>
+
+
+
 <div class="btn-group">
     <button class="btn1 start" id="start-run">转动</button>
     <button id="pause-run">停止</button>
@@ -50,6 +67,10 @@
     <button class="btn1" id="speed-up">加速</button>
     <button id="reverse-run">反向</button>
 </div>
+
+<!-- <button onclick="showModal()">Show Custom Prompt</button> -->
+
+    
 </div>
 <script src="style.js"></script>
 

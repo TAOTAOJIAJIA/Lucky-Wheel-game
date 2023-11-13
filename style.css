@@ -16,7 +16,7 @@ body{
     width:300px;
     height: 300px;
     position: relative;
-    border-radius: 50%;
+    /* border-radius: 50%; */
 }
 
 .wapper{
@@ -24,7 +24,7 @@ body{
     height: 300px;
     border-radius: 50%;
     overflow: hidden;
-    background-color: black;
+    background-color: #fff;
     transform:rotate(22.5deg);
     /* background-color: dimgray; */
  }
@@ -191,3 +191,53 @@ body{
    cursor: pointer;
 }
 
+.lucky{
+   font-size: 40px;
+   margin-top:30px;
+   margin-left:90px;
+}
+
+.start1{
+   font-size: 40px;
+   margin-top:30px;
+   margin-left:130px;
+}
+
+.users{
+   font-size: 20px;
+   margin-top:30px;
+   margin-left:90px;
+}
+
+#userInput{
+   width: 200px;
+   height: 50px;
+   background-color: #fff(235, 242, 46);
+   border:none;
+   border-radius: 5px;
+   font-size: 14px;
+   cursor: pointer;
+   margin-left:90px;
+   margin-top:30px;
+   cursor: pointer;
+}
+
+.startButton{
+   margin-left:90px;
+   width: 200px;
+   height: 50px;
+   margin-top:30px;
+}
+.modal {
+    display: none;
+    position: fixed;
+    width: 400px;
+    height: 480px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #d7eded;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
